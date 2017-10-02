@@ -1,0 +1,6 @@
+require "bundler/setup"
+require "test-unit"
+require "test/unit/rr"
+require "fluent/test"
+require "fluent/log"
+require "fluent/plugin/filter_docker_journal_concat"
