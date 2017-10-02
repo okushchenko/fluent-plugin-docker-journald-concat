@@ -7,7 +7,7 @@ class FilterConcatTest < Test::Unit::TestCase
   end
 
   def create_driver(conf)
-    Fluent::Test::Driver::Filter.new(Fluent::Plugin::DockerJournalConcatFilter).configure(conf, syntax: :v1)
+    Fluent::Test::Driver::Filter.new(Fluent::Plugin::DockerJournaldConcatFilter).configure(conf, syntax: :v1)
   end
 
   def filter(conf, messages, wait: nil)

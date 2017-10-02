@@ -1,8 +1,8 @@
 require "fluent/plugin/filter"
 
 module Fluent::Plugin
-  class DockerJournalConcatFilter < Filter
-    Fluent::Plugin.register_filter("docker_journal_concat", self)
+  class DockerJournaldConcatFilter < Filter
+    Fluent::Plugin.register_filter("docker_journald_concat", self)
 
     helpers :timer, :event_emitter
 
@@ -145,7 +145,7 @@ module Fluent::Plugin
         log.info("Shutdown flush: #{stream_identity}")
       end
       @buffer.clear
-      log.info("Filter docker_journal_concat shutdown finished")
+      log.info("Filter docker_journald_concat shutdown finished")
     end
 
     def handle_timeout_error(tag, time, record, message)
